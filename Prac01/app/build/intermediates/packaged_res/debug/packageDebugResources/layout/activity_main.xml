@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="#800080"
+        android:padding="10dp"
+        android:textSize="18dp"
+
+        android:text="Exercises 1"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+        <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/txtName"
+            android:layout_width="161dp"
+            android:layout_height="36dp"
+            android:text="TextView"
+            app:layout_constraintBottom_toTopOf="@+id/txtGPA"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            tools:layout_editor_absoluteX="125dp" />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/txtGPA"
+            android:layout_width="153dp"
+            android:layout_height="43dp"
+            android:text="TextView"
+            tools:layout_editor_absoluteX="125dp"
+            tools:layout_editor_absoluteY="248dp" />
+
+        <Button
+            android:layout_marginTop="50dp"
+            android:id="@+id/btnNewAct"
+            android:layout_width="wrap_content"
+            android:layout_height="54dp"
+            android:text="START NEW ACTIVITY"
+            app:cornerRadius="10dp"
+            tools:layout_editor_absoluteX="125dp"
+            tools:layout_editor_absoluteY="379dp" />
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
