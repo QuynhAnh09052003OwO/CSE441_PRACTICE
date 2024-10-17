@@ -114,6 +114,39 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        // tạo nội dung
+        String message = name
+                + cmnd
+                + degree_rbtn
+                + interest
+                + "----------\n"
+                + "Thông tin bổ sung:\n"
+                + addition
+                + "----------\n";
+        buider.setMessage(message); // thiết lập nội dung cho dialog
+        buider.create().show(); // hiển thị dialog
+    }
+    public boolean validate() {
+        if (name_et.getText().toString().trim().length() < 3) {
+            name_et.requestFocus(); // đặt focus vào edittext
+            name_et.selectAll(); // chọn toàn bộ text trong edittext
+            // hiện thông báo trên activity này khoảng 3.5s (LENGTH_LONG)
+            Toast.makeText(this, "Tên phải dài hơn 3 ký tự!", Toast.LENGTH_LONG).show();
+            return false;
+        }
+        if (cmnd_et.getText().toString().trim().length() != 12) {
+            cmnd_et.requestFocus(); // đặt focus vào edittext
+            cmnd_et.selectAll(); // chọn toàn bộ text trong edittext
+            // hiện thông báo trên activity này khoảng 3.5s (LENGTH_LONG)
+            Toast.makeText(this, "CMND chỉ dài 12 ký tự!", Toast.LENGTH_LONG).show();
+            return false;
+        }
+        if (degree_gr.getCheckedRadioButtonId() == -1) {
+            Toast.makeText(this, "Phải chọn bằng cấp!", Toast.LENGTH_LONG).show();
+            return false;
+        }
+        return true;
+    }
     }
 
 
