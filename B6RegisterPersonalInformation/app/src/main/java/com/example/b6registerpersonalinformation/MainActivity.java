@@ -42,7 +42,78 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
+        name_et = findViewById(R.id.name_et);
+        cmnd_et = findViewById(R.id.cmnd_et);
+        infor_et = findViewById(R.id.infor_et);
+        send_btn = findViewById(R.id.btnSend);
+        news_ckb = findViewById(R.id.news_ckb);
+        book_ckb = findViewById(R.id.book_ckb);
+        coding_ckb = findViewById(R.id.coding_ckb);
+        degree_gr = findViewById(R.id.degree_btn);
 
-}
+        exitPress();
+
+        send_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showInformation();
+            }
+        });
+    }
+    public void exitPress(MainActivity this) {
+        this.getOnBackPressedDispatcher().addCallback(new OnBackPressedCallback(true) {
+            @Override
+            public void handleOnBackPressed() {
+                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                builder.setTitle(getString(R.string.exit_title));
+                builder.setMessage(getString(R.string.exit_message));
+                builder.setIcon(R.drawable.exit_icon); // chèn icon
+                // nút Yes hiện phải dưới dialog
+                builder.setNeutralButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        finish(); // đóng activity
+                    }
+                });
+                // nút No hiện trái dưới dialog
+                builder.setPositiveButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel(); // đóng dialog
+                    }
+                });
+                builder.create().show();
+            }
+        });
+    }
+
+    public void showInformation() {
+        if(!validate()) return;
+        // lấy name
+        String name = name_et.getText().toString().trim()+"\n";
+        // lấy cmnd
+        String cmnd = cmnd_et.getText().toString().trim()+"\n";
+        // lấy bằng cấp
+        RadioButton degree_id = findViewById(degree_gr.getCheckedRadioButtonId());
+        String degree_rbtn = degree_id.getText()+"\n";
+        // lấy sở thích
+        String interest="";
+        if (news_ckb.isChecked()) interest += news_ckb.getText()+"\n";
+        if (book_ckb.isChecked()) interest += book_ckb.getText()+"\n";
+        if (coding_ckb.isChecked()) interest += coding_ckb.getText()+"\n";
+        // lấy thông tin bổ sung
+        String addition = infor_et.getText().toString()+"\n";
+
+        // tạo dialog
+        AlertDialog.Builder buider = new AlertDialog.Builder(this);
+        buider.setTitle("Thông tin cá nhân");
+        buider.setPositiveButton("Đóng", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.cancel();
+            }
+        });
+
+    }
 
 
