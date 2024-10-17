@@ -18,6 +18,29 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button cTOf_btn, fTOc_btn, clear_btn;
     private EditText c_ed, f_ed;
 
+
+    @Override
+    public void onClick(View v) {
+        if (v.getId() == R.id.cTOf_btn) {
+            String getC = c_ed.getText()+"";
+            getC = getC.replace(',','.');
+            double c = Double.parseDouble(getC);
+            f_ed.setText(""+dcf.format(c*1.8+32));
+        }
+        else if (v.getId()==R.id.fTOc_btn) {
+            String getF = f_ed.getText()+"";
+            getF = getF.replace(",",".");
+            double f = Double.parseDouble(getF);
+            c_ed.setText(""+dcf.format((f-32)/1.8));
+        }
+        else if (v.getId()==R.id.clear_btn) {
+            c_ed.setText("");
+            f_ed.setText("");
+        }
+    }
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,25 +65,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
     DecimalFormat dcf = new DecimalFormat("#.#");
 
-    @Override
-    public void onClick(View v) {
-        if (v.getId() == R.id.cTOf_btn) {
-            String getC = c_ed.getText()+"";
-            getC = getC.replace(',','.');
-            double c = Double.parseDouble(getC);
-            f_ed.setText(""+dcf.format(c*1.8+32));
-        }
-        else if (v.getId()==R.id.fTOc_btn) {
-            String getF = f_ed.getText()+"";
-            getF = getF.replace(",",".");
-            double f = Double.parseDouble(getF);
-            c_ed.setText(""+dcf.format((f-32)/1.8));
-        }
-        else if (v.getId()==R.id.clear_btn) {
-            c_ed.setText("");
-            f_ed.setText("");
-        }
-    }
+
+
+
 
     @Override
     public void onPointerCaptureChanged(boolean hasCapture) {
