@@ -15,30 +15,30 @@
         android:orientation="vertical"
         android:padding="24dp"
         >
-    <Button
-        android:text="Call Phone"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/btn_call_phone"
-        android:textColor="@android:color/holo_green_light"
-        android:textStyle="normal|bold"
-        android:textSize="30sp" />
-    <Button
-        android:text="send sms"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/btn_send_sms"
-        android:textSize="30sp"
-        android:textColor="@android:color/holo_green_light"
-        android:textStyle="normal|bold" />
-    <Button
-        android:text="send gmail"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/btn_send_gmail"
-        android:textSize="30sp"
-        android:textColor="@android:color/holo_green_light"
-        android:textStyle="normal|bold" />
+        <Button
+            android:text="Call Phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_call_phone"
+            android:textColor="@android:color/holo_green_light"
+            android:textStyle="normal|bold"
+            android:textSize="30sp" />
+        <Button
+            android:text="send sms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_send_sms"
+            android:textSize="30sp"
+            android:textColor="@android:color/holo_green_light"
+            android:textStyle="normal|bold" />
+        <Button
+            android:text="send gmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_send_gmail"
+            android:textSize="30sp"
+            android:textColor="@android:color/holo_green_light"
+            android:textStyle="normal|bold" />
     </LinearLayout>
 
 </LinearLayout>
