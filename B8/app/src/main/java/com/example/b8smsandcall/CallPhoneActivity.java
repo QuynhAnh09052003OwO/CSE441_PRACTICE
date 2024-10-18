@@ -43,7 +43,7 @@ public class CallPhoneActivity extends AppCompatActivity {
             if (ActivityCompat.checkSelfPermission(
                     CallPhoneActivity.this,
                     android.Manifest.permission.CALL_PHONE)
-            != PackageManager.PERMISSION_GRANTED) // kiểm tra quyền đã đc cấp hay chưa
+                    != PackageManager.PERMISSION_GRANTED) // kiểm tra quyền đã đc cấp hay chưa
             {
                 ActivityCompat.requestPermissions(
                         CallPhoneActivity.this,
