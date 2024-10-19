@@ -27,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
@@ -46,6 +48,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        TextView txtName = findViewById(R.id.)
+
         //recyclerView
         rcvStudent = findViewById(R.id.rcvStudent);
         studentAdapter = new StudentAdapter(this);
@@ -54,6 +58,8 @@ public class MainActivity extends AppCompatActivity {
         rcvStudent.setLayoutManager(linearLayoutManager);
         studentAdapter.setData(getListStudent());
         rcvStudent.setAdapter(studentAdapter);
+
+
 
     }
 

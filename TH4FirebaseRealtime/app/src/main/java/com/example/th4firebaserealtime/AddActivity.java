@@ -49,16 +49,16 @@ public class AddActivity extends AppCompatActivity {
         edit_score = findViewById(R.id.edit_score);
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference("message");
+        DatabaseReference myRef = database.getReference("sinhvien");
 
         btnSubmit = findViewById(R.id.btnSubmit);
         btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                myRef.setValue(edit_id.getText().toString().trim());
-                myRef.setValue(edit_name.getText().toString().trim());
-                myRef.setValue(edit_class.getText().toString().trim());
-                myRef.setValue(edit_score.getText().toString().trim());
+                String msv = edit_id.getText().toString().trim();
+                myRef.child(msv).child("ho ten").setValue(edit_name.getText().toString().trim());
+                myRef.child(msv).child("lop").setValue(edit_class.getText().toString().trim());
+                myRef.child(msv).child("diem").setValue(edit_score.getText().toString().trim());
             }
         });
     }
