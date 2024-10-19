@@ -9,6 +9,7 @@
     android:orientation="vertical">
 
     <Button
+        android:id="@+id/btnAdd"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:text="Thêm"

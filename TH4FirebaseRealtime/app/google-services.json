@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "626547064140",
+    "project_id": "studentdb-aa8de",
+    "storage_bucket": "studentdb-aa8de.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:626547064140:android:26f4a22de012aaebcc23e9",
+        "android_client_info": {
+          "package_name": "com.example.th4firebaserealtime"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7JWY2MKmyYWPcQYQMQNXE0EQOcj1ouUE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

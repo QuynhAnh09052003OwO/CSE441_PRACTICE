@@ -8,10 +8,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="com.example.th4firebaserealtime" />
+                  <option name="mobileSdkAppId" value="1:626547064140:android:26f4a22de012aaebcc23e9" />
+                  <option name="projectId" value="studentdb-aa8de" />
+                  <option name="projectNumber" value="626547064140" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />

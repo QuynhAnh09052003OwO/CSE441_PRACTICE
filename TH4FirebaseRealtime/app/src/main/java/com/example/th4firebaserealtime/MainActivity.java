@@ -1,8 +1,13 @@
 package com.example.th4firebaserealtime;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -31,6 +36,17 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
+        //su kien bam nut "Them"
+        Button btnAdd =findViewById(R.id.btnAdd);
+        btnAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, AddActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        //recyclerView
         rcvStudent = findViewById(R.id.rcvStudent);
         studentAdapter = new StudentAdapter(this);
 
@@ -38,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
         rcvStudent.setLayoutManager(linearLayoutManager);
         studentAdapter.setData(getListStudent());
         rcvStudent.setAdapter(studentAdapter);
+
     }
 
     private List<Student> getListStudent(){
@@ -51,4 +68,6 @@ public class MainActivity extends AppCompatActivity {
 
         return list;
     }
+
+
 }
