@@ -2,14 +2,16 @@ package com.example.th4firebaserealtime;
 
 public class Student {
 
-    String id, name, _class;
+    String id;
+    String name;
+    String _class;
     float score;
 
-    public Student(String id, float score, String _class, String name) {
+    public Student(String id, String name, String _class, float score) {
         this.id = id;
-        this.score = score;
-        this._class = _class;
         this.name = name;
+        this._class = _class;
+        this.score = score;
     }
 
     public Student() {

@@ -38,10 +38,10 @@ public class StudentAdapter extends RecyclerView.Adapter<StudentAdapter.StudentV
         if (student == null)
             return;
 
-        holder.txtName.setText(student.getName());
-        holder.txtID.setText(student.getId());
-        holder.txtClass.setText(student.get_class());
-        holder.txtScore.setText(String.valueOf(student.getScore()));
+        holder.txtName.setText("Name: " + student.getName());
+        holder.txtID.setText("ID: " + student.getId());
+        holder.txtClass.setText("Class: " + student.get_class());
+        holder.txtScore.setText("Score: " + String.valueOf(student.getScore()));
     }
 
     @Override
