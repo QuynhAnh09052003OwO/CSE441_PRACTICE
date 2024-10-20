@@ -45,55 +45,48 @@ public class MainActivity extends AppCompatActivity {
             parseXML();
             adapter.notifyDataSetChanged();
         });
-        private void parseXML() {
+        private void parseXML () {
             try {
                 InputStream myinput = getAssets().open("employee.xml");
                 XmlPullParserFactory fc = XmlPullParserFactory.newInstance();
                 XmlPullParser parser = fc.newPullParser();
-                parser.setInput(myinput,null);
-                int eventType=-1;
+                parser.setInput(myinput, null);
+                int eventType = -1;
                 String nodeName;
-                String datashow="";
-                while(eventType!=XmlPullParser.END_DOCUMENT)
-                {
-                    eventType=parser.next();
-                    switch(eventType)
-                    {
+                String datashow = "";
+                while (eventType != XmlPullParser.END_DOCUMENT) {
+                    eventType = parser.next();
+                    switch (eventType) {
                         case XmlPullParser.START_DOCUMENT:
                             break;
                         case XmlPullParser.START_TAG:
-                            nodeName=parser.getName();
-                            if(nodeName.equals("employee")){
-                                datashow+=parser.getAttributeValue(0)+"-";
-                                datashow+=parser.getAttributeValue(1)+"-";
-                            }
-                            else if(nodeName.equals("name")){
+                            nodeName = parser.getName();
+                            if (nodeName.equals("employee")) {
+                                datashow += parser.getAttributeValue(0) + "-";
+                                datashow += parser.getAttributeValue(1) + "-";
+                            } else if (nodeName.equals("name")) {
                                 parser.next();
-                                datashow+=parser.getText()+"-";
-                            }
-                            else if(nodeName.equals("phone")){
-                                datashow+=parser.nextText();
+                                datashow += parser.getText() + "-";
+                            } else if (nodeName.equals("phone")) {
+                                datashow += parser.nextText();
                             }
                             break;
                         case XmlPullParser.END_TAG:
-                            nodeName=parser.getName();
-                            if(nodeName.equals("employee")){
+                            nodeName = parser.getName();
+                            if (nodeName.equals("employee")) {
                                 list.add(datashow);
-                                datashow="";
+                                datashow = "";
                             }
                             break;
                     }
                     adapter.notifyDataSetChanged();
                 }
-            }
-            catch (IOException e1)
-            {
+            } catch (IOException e1) {
                 e1.printStackTrace();
-            }
-            catch (XmlPullParserException e2)
-            {
+            } catch (XmlPullParserException e2) {
                 e2.printStackTrace();
             }
 
         }
+    }
 }
