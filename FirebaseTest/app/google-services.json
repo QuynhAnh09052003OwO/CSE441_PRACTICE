@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "1011434814671",
+    "firebase_url": "https://mangaapp-526e1-default-rtdb.firebaseio.com",
+    "project_id": "mangaapp-526e1",
+    "storage_bucket": "mangaapp-526e1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1011434814671:android:01dbf6a3d48bcc9c318bba",
+        "android_client_info": {
+          "package_name": "com.example.firebasetest"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBEzRl1dyOw3RIcKG9pozTUbiFQ4QWhfjI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1011434814671:android:fe8295622e38f99d318bba",
+        "android_client_info": {
+          "package_name": "com.group.myreadingapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBEzRl1dyOw3RIcKG9pozTUbiFQ4QWhfjI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
