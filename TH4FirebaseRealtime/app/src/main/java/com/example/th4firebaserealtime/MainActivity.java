@@ -48,7 +48,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        TextView txtName = findViewById(R.id.)
 
         //recyclerView
         rcvStudent = findViewById(R.id.rcvStudent);
