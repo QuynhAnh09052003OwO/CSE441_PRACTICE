@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <group>
+        <item android:id="@+id/nav_item_cafe"
+            android:title="Cafe" />
+        <item android:id="@+id/nav_item_juice"
+            android:title="Nuoc trai cay" />
+        <item android:id="@+id/nav_item_tea"
+            android:title="Tra dac biet" />
+    </group>
+
+    <item
+        android:title="">
+        <menu>
+            <item android:id="@+id/nav_item_setting"
+                android:title="Cai dat" />
+            <item android:id="@+id/nav_item_logout"
+                android:title="Dang xuat" />
+        </menu>
+
+    </item>
+</menu>
